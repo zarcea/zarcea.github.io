@@ -15,23 +15,31 @@ img {margin-bottom: -7px}
 .w3-third img{margin-bottom: 12px; cursor: pointer}
 .w3-third img:hover{opacity: 0.5; transition: 0.3s}
 section {max-height: 100%;}
-.centered {position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); transform: -webkit-translate(-50%, -50%); transform: -moz-translate(-50%, -50%); transform: -ms-translate(-50%, -50%);}
+
+.displayContainer {
+    border: 1px dotted #000;
+    display: block;
+    height: 50%;
+    width: 100%;
+}
+
+.centerPseudo {
+    display: inline-block;
+    text-align: center;
+}
 
 }
 </style>
 </head>
 <body>
 
-
-<a href="#section2">Click Me to Smooth Scroll to Section 2 Below</a>
-
-<div class="main centered" id="section1" align="center">
+<div class="main displayContainer centerPseudo" id="section1" align="center">
   <section>
 <img src="images/profile-icon.png" class="img-responsive" alt="profile_icon" width="150px" height="150px">
 <h1><b>hi! i'm ceasar sauro</b></h1>
   <p><b>DIGITAL CREATIVE &nbsp;&nbsp; | &nbsp;&nbsp; PHOTOGRAPHER</b></p>
   <p>from the queen city of the south, Cebu, Philippines, an all-around weirdo for <b>art</b>; occasionally does freehand <b>drawing</b>,<br> loves <b>minimalism</b>, interior <b>design</b>, installation art, music; <b>photography</b> enthusiast, <b>technology</b> &amp; <b>internet</b> savvy.</p>
-
+  <a href="#section2">Click Me to Smooth Scroll to Section 2 Below</a>
   </section>
 </div>
 
