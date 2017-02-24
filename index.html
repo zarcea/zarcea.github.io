@@ -27,18 +27,21 @@ img {margin-bottom: -7px}
   <div class="w3-clear"></div>
   <img src="images/profile-icon.png" class="img-responsive" alt="profile_icon" width="150px" height="150px">
 
+  <section id="home_section" style="min-height:100%">
   <h1><b>hi! i'm ceasar sauro</b></h1>
   <p><b>DIGITAL CREATIVE &nbsp;&nbsp; | &nbsp;&nbsp; PHOTOGRAPHER</b></p>
   <p>from the queen city of the south, Cebu, Philippines, an all-around weirdo for <b>art</b>; occasionally does freehand <b>drawing</b>,<br> loves <b>minimalism</b>, interior <b>design</b>, installation art, music; <b>photography</b> enthusiast, <b>technology</b> &amp; <b>internet</b> savvy.</p>
+    <a href="#work_section">work</a> <a href="#contact_section">contact</a>
+  </section>
 </header>
 
 
 <!-- Photo Grid -->
 
-  <div id="work_section" align="center">
+  <section id="work_section" style="min-height:100%">
   <h1><b>portfolio</b></h1>
    <p><b>ART WORKS | PHOTOGRAPHY</b></p>
-  </div>
+  
 
 <div class="w3-row-padding" id="myGrid" style="margin-bottom:128px">
   <div class="w3-third">
@@ -68,12 +71,15 @@ img {margin-bottom: -7px}
     <img src="https://lh3.googleusercontent.com/1b3rPEeZ2AsU8tg_LAMaQnalQcaKW94_zzPg26JTnaRMl8MW4Qcku9KhLvQkZeH6uKsyyqio=w1920-h950-rw" style="width:100%" onclick="onClick(this)" alt="Rocks">
   </div>
 </div>
+</section>
 
-  <div id="contact_section" align="center">
+  <section id="contact_section" style="min-height:100%">
+  <div align="center">
   <h1><b>contact me</b></h1>
   <p><b>INSTAGRAM</b></p>
   <p>@zarcea_</p>
   </div>
+  <section>
 
 <!-- End Page Content -->
 
@@ -93,7 +99,8 @@ img {margin-bottom: -7px}
    <a href="https://www.instagram.com/zarcea_/"><i class="fa fa-instagram w3-hover-text-purple"></i></a>
    <a href="https://www.flickr.com/photos/zarcea/albums"><i class="fa fa-flickr w3-hover-text-pink"></i></a>
 </footer>
- 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
 <script>
 
 // Open and close sidenav
@@ -113,6 +120,33 @@ function onClick(element) {
   var captionText = document.getElementById("caption");
   captionText.innerHTML = element.alt;
 }
+
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+
+
 </script>
 
 </body>
