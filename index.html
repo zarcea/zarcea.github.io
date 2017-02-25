@@ -33,7 +33,7 @@ section {max-height: 100%;}
 <body>
 
 <!-- Sidenav/menu -->
-<nav class="w3-sidenav w3-black w3-animate-right w3-center w3-top w3-text-light-grey w3-large" style="z-index:3;width:250px;font-weight:bold;display:none;right:0;opacity:0.7" id="mySidenav">
+<nav class="w3-sidenav w3-black w3-animate-right w3-center w3-top w3-text-light-grey w3-large" style="z-index:3;width:250px;font-weight:bold;display:none;right:0;opacity:0.8" id="mySidenav">
   <div style="margin-top:83px"></div> 
   <a href="#about" onclick="w3_close()" class="w3-padding-16">ABOUT ME</a> 
   <a href="#work" onclick="w3_close()" class="w3-padding-16">WORK</a>
@@ -41,7 +41,7 @@ section {max-height: 100%;}
 </nav>
 
 <!-- Top menu on small screens -->
-<header class="w3-container w3-top w3-white w3-xlarge w3-padding-16">
+<header class="w3-container w3-top w3-white w3-xlarge w3-padding-16" style="opacity:0.8">
   
   <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
 </header>
@@ -134,7 +134,6 @@ section {max-height: 100%;}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
 <script>
 
-// Open and close sidenav
 // Script to open and close sidenav
 function w3_open() {
     document.getElementById("mySidenav").style.display = "block";
