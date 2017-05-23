@@ -26,7 +26,7 @@
     .centerPseudo {display: inline-block; text-align: center;}
 </style>
 </head>
-<body>
+<body onload="myLoad()">
 
 <nav class="w3-sidenav w3-black w3-animate-right w3-center w3-top w3-text-light-grey w3-large" style="z-index:3;width:250px;font-weight:bold;display:none;right:0;opacity:0.8" id="mySidenav">
     <div style="margin-top:83px"></div> 
@@ -61,7 +61,7 @@
         <h1 style="color:#999999"><b>portfolio</b></h1>
         <p style="letter-spacing:1px;color:black"><b>GRAPHIC DESIGN&nbsp; | &nbsp;PHOTOGRAPHY</b></p>
         <p style="color:#666666">for more designs / photos&nbsp; <a href="#contact" style="text-decoration:none"><b style="letter-spacing:1px;color:black">contact me!</b></a></p>
-        <br><br>
+        <br>
         <p style="color:#666666"><a href="#" style="text-decoration:none"><b style="letter-spacing:1px;color:black">show design only</b></a> &nbsp;&nbsp;<a href="#" style="text-decoration:none"><b style="letter-spacing:1px;color:black">show photos only</b></a><p>
         </div>
 <div style="margin-top:50px"></div>
@@ -93,6 +93,9 @@
         <img src="https://c1.staticflickr.com/3/2842/32779000240_7955e004c9_b.jpg" style="width:100%" onclick="onClick(this)" alt="<b>logo design</b> | Dead Soxy">
     </div>
 </div>
+
+
+
     </section>
 </div>
 
@@ -138,6 +141,10 @@ function onClick(element) {
   captionText.innerHTML = element.alt;
 }
 
+function myLoad() {
+	var z = document.getElementById('designCategory');
+	z.style.display = 'none';
+}
 
 $(document).ready(function(){
   $("a").on('click', function(event) {
