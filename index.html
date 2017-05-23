@@ -170,12 +170,17 @@ function onClick(element) {
 function myLoad() {
 	var z = document.getElementById('myGrid');
 	z.style.display = 'none';
+	document.getElementById("btnDesign").style.color = "#999999";
+	document.getElementById("btnDesign").style.textDecoration = "none";
+	document.getElementById("btnPhoto").style.color = "#666666";
+	document.getElementById("btnPhoto").style.textDecoration = "underline";
 }
 
 function myDesign() {
 	document.getElementById("btnDesign").style.color = "#666666";
 	document.getElementById("btnDesign").style.textDecoration = "underline";
 	document.getElementById("btnPhoto").style.color = "#999999";
+	document.getElementById("btnPhoto").style.textDecoration = "none";
 	var a = document.getElementById('myGrid');
 	a.style.display = 'block';
 	var b = document.getElementById('myGrid2');
@@ -184,6 +189,7 @@ function myDesign() {
 
 function myPhoto() {
 	document.getElementById("btnDesign").style.color = "#999999";
+	document.getElementById("btnDesign").style.textDecoration = "none";
 	document.getElementById("btnPhoto").style.color = "#666666";
 	document.getElementById("btnPhoto").style.textDecoration = "underline";
 	var y = document.getElementById('myGrid2');
