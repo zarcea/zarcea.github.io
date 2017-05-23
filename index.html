@@ -51,6 +51,7 @@
             <h1 style="background-color:#f9f9f9;color:#999999"><b>hi, i'm ceasar sauro</b></h1>
             <p style="letter-spacing:1px;color:black"><b>DIGITAL CREATIVE&nbsp; | &nbsp;PHOTOGRAPHER</b></p>
             <p style="color:#666666;line-height:170%;max-width:680px;margin:auto">from the queen city of the south, Cebu, Philippines, an all-around weirdo for <b style="letter-spacing:1px;color:black">art</b>; occasionally does freehand <b style="letter-spacing:1px;color:black">drawing</b>, loves <b style="letter-spacing:1px;color:black">minimalism</b>, interior <b style="letter-spacing:1px;color:black">design</b>, installation art, music; <b style="letter-spacing:1px;color:black">photography</b> enthusiast, <b style="letter-spacing:1px;color:black">technology</b> &amp; <b style="letter-spacing:1px;color:black">internet</b> savvy.</p>
+            <button onclick="hideCategories()">show photos only</button>
     </section>
 </div>
 
@@ -134,6 +135,15 @@ function onClick(element) {
   document.getElementById("modal01").style.display = "block";
   var captionText = document.getElementById("caption");
   captionText.innerHTML = element.alt;
+}
+
+function hideCategories() {
+    var x = document.getElementById('work');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
 }
 
 $(document).ready(function(){
